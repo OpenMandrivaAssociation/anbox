@@ -1,0 +1,13 @@
+diff -up anbox-master/src/anbox/logger.cpp.omv~ anbox-master/src/anbox/logger.cpp
+--- anbox-master/src/anbox/logger.cpp.omv~	2019-05-25 20:52:17.542838976 +0200
++++ anbox-master/src/anbox/logger.cpp	2019-05-25 20:52:25.690838581 +0200
+@@ -17,7 +17,9 @@
+ 
+ #include <thread>
+ 
++#ifndef BOOST_LOG_DYN_LINK
+ #define BOOST_LOG_DYN_LINK
++#endif
+ #include <boost/date_time.hpp>
+ #include <boost/filesystem.hpp>
+ #include <boost/log/expressions.hpp>

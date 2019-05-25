@@ -1,0 +1,12 @@
+diff -up anbox/external/cpu_features/CMakeLists.txt.omv~ anbox/external/cpu_features/CMakeLists.txt
+--- anbox/external/cpu_features/CMakeLists.txt.omv~	2018-12-18 02:12:52.769264638 +0100
++++ anbox/external/cpu_features/CMakeLists.txt	2018-12-18 02:13:23.474746143 +0100
+@@ -67,7 +67,7 @@ target_include_directories(cpu_features
+   PRIVATE
+   include/internal
+ )
+-set_target_properties(cpu_features PROPERTIES PUBLIC_HEADER "${_HDRS}")
++set_target_properties(cpu_features PROPERTIES PUBLIC_HEADER "${_HDRS}" SOVERSION 0 VERSION "0.0")
+ target_compile_definitions(cpu_features
+   PUBLIC STACK_LINE_READER_BUFFER_SIZE=1024)
+ target_link_libraries(cpu_features PUBLIC ${CMAKE_DL_LIBS})

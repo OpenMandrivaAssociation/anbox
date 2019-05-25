@@ -1,0 +1,11 @@
+diff -up anbox/external/backward-cpp/CMakeLists.txt.omv~ anbox/external/backward-cpp/CMakeLists.txt
+--- anbox/external/backward-cpp/CMakeLists.txt.omv~	2018-12-18 00:57:03.242671733 +0100
++++ anbox/external/backward-cpp/CMakeLists.txt	2018-12-18 00:57:24.334951595 +0100
+@@ -77,6 +77,7 @@ endif()
+ add_library(backward ${libtype} backward.cpp)
+ target_compile_definitions(backward PUBLIC ${BACKWARD_DEFINITIONS})
+ target_include_directories(backward PUBLIC ${BACKWARD_INCLUDE_DIRS})
++target_link_libraries(backward dw)
+ 
+ ###############################################################################
+ # TESTS
