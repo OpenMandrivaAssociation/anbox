@@ -58,11 +58,13 @@ diff --git a/tests/anbox/common/type_traits_tests.cpp b/tests/anbox/common/type_
 index a62421e..59297d0 100644
 --- a/tests/anbox/common/type_traits_tests.cpp
 +++ b/tests/anbox/common/type_traits_tests.cpp
-@@ -18,6 +18,8 @@
+@@ -18,6 +18,10 @@
  #include <list>
  #include <vector>
  
++#ifdef __clang__
 +#pragma clang diagnostic ignored "-Wunused-lambda-capture"
++#endif
 +
  namespace anbox {
  namespace common {

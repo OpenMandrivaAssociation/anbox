@@ -1,12 +1,12 @@
-diff -up anbox/external/cpu_features/CMakeLists.txt.omv~ anbox/external/cpu_features/CMakeLists.txt
---- anbox/external/cpu_features/CMakeLists.txt.omv~	2018-12-18 02:12:52.769264638 +0100
-+++ anbox/external/cpu_features/CMakeLists.txt	2018-12-18 02:13:23.474746143 +0100
-@@ -67,7 +67,7 @@ target_include_directories(cpu_features
-   PRIVATE
-   include/internal
- )
--set_target_properties(cpu_features PROPERTIES PUBLIC_HEADER "${_HDRS}")
-+set_target_properties(cpu_features PROPERTIES PUBLIC_HEADER "${_HDRS}" SOVERSION 0 VERSION "0.0")
- target_compile_definitions(cpu_features
-   PUBLIC STACK_LINE_READER_BUFFER_SIZE=1024)
+diff -up anbox-master/external/cpu_features/CMakeLists.txt.3~ anbox-master/external/cpu_features/CMakeLists.txt
+--- anbox-master/external/cpu_features/CMakeLists.txt.3~	2020-09-05 05:39:11.601037665 +0200
++++ anbox-master/external/cpu_features/CMakeLists.txt	2020-09-05 05:39:44.944762024 +0200
+@@ -128,7 +128,7 @@ if(NOT PROCESSOR_IS_X86 AND UNIX)
+   list(APPEND CPU_FEATURES_SRCS $<TARGET_OBJECTS:unix_based_hardware_detection>)
+ endif()
+ add_library(cpu_features ${CPU_FEATURES_HDRS} ${CPU_FEATURES_SRCS})
+-set_target_properties(cpu_features PROPERTIES PUBLIC_HEADER "${CPU_FEATURES_HDRS}")
++set_target_properties(cpu_features PROPERTIES PUBLIC_HEADER "${CPU_FEATURES_HDRS}" SOVERSION 0 VERSION "0.0")
+ setup_include_and_definitions(cpu_features)
  target_link_libraries(cpu_features PUBLIC ${CMAKE_DL_LIBS})
+ set_property(TARGET cpu_features PROPERTY POSITION_INDEPENDENT_CODE ${BUILD_PIC})
