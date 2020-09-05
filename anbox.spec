@@ -27,6 +27,7 @@ BuildRequires:	pkgconfig(lxc) >= 3.0
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(libsystemd)
 BuildRequires:	pkgconfig(libglvnd)
+BuildRequires:	pkgconfig(libcap)
 BuildRequires:	cmake(SDL2)
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(SDL2_image)
