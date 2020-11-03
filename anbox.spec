@@ -35,6 +35,7 @@ BuildRequires:	pkgconfig(libelf)
 BuildRequires:	pkgconfig(protobuf)
 BuildRequires:	pkgconfig(protobuf-lite)
 BuildRequires:	pkgconfig(properties-cpp)
+BuildRequires:	pkgconfig(gtest)
 BuildRequires:	binutils-devel
 BuildRequires:	libdwarf-devel
 BuildRequires:	lxc
@@ -43,7 +44,7 @@ BuildRequires:	gtest-source >= 1.8.1
 Requires:	lxc >= 3.0
 
 %description
-Run Android apps in a container
+Run Android apps in a container.
 
 %prep
 %setup -n anbox-master -a 1 -a 2
