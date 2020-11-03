@@ -36,6 +36,7 @@ BuildRequires:	pkgconfig(protobuf)
 BuildRequires:	pkgconfig(protobuf-lite)
 BuildRequires:	pkgconfig(properties-cpp)
 BuildRequires:	pkgconfig(gtest)
+BuildRequires:	pkgconfig(expat)
 BuildRequires:	binutils-devel
 BuildRequires:	libdwarf-devel
 BuildRequires:	lxc
