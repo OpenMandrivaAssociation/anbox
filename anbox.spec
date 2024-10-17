@@ -5,7 +5,7 @@ Version:	20200905
 Release:	1
 Summary:	Run Android apps in a container
 Group:		Applications/Internet
-URL:		http://anbox.io/
+URL:		https://anbox.io/
 Source0:	https://github.com/anbox/anbox/archive/master/%{name}-%{version}.tar.gz
 # Anbox actually calls for b9593c8b395318bb2bc42683a94f962564cc4664
 # But that one is broken on ARM, so let's use something more current...
